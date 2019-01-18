@@ -14,9 +14,9 @@ make
 
 to compile all code. Then, run
 
-./bankingServer <port>
+./bankingServer \<port\>
   
-./bankingClient <hostname> <port> (on another system)
+./bankingClient \<hostname\> \<port\> (on another system)
   
 Commands: create <string accountName>, serve <string accountName>, deposit <double amount>,
 withdraw <double amount>, query, end, quit
