@@ -5,6 +5,7 @@ Banking Client/Server Documentation
 12/9/2018
 
 [--USAGE--]
+
 Run:
 make clean
 make
@@ -14,8 +15,11 @@ to compile all code. Then, run
 Commands: create <string accountName>, serve <string accountName>, deposit <double amount>,
 withdraw <double amount>, query, end, quit
 
+
 [--DESIGN DOCUMENTATION--]
+
 SERVER
+
 The first thing that occurs is the setup for the 15 second diagnostic timer. Then it uses
 a new socket to connect to any client. Upon the first connection, it enters an infinite loop
 which continues to detect and accrue connections. Each thread runs the function clientThread().
@@ -25,6 +29,7 @@ of characters for each command is copied over and tested. When SIGINT is detecte
 pthreads are canceled, all sockets are closed, and the linked list is destroyed.
 
 CLIENT
+
 Upon startup, the client connects to the server. If it fails, it will try again in 3 seconds.
 Then, a listener thread is spawned which reads from the socket until certain strings are read.
 When connected, the user is prompted for the first command. This enters a loop that only breaks
