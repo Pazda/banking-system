@@ -7,11 +7,17 @@ Banking Client/Server Documentation
 [--USAGE--]
 
 Run:
+
 make clean
+
 make
+
 to compile all code. Then, run
+
 ./bankingServer <port>
+  
 ./bankingClient <hostname> <port> (on another system)
+  
 Commands: create <string accountName>, serve <string accountName>, deposit <double amount>,
 withdraw <double amount>, query, end, quit
 
