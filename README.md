@@ -18,8 +18,8 @@ to compile all code. Then, run
   
 ./bankingClient \<hostname\> \<port\> (on another system)
   
-Commands: create <string accountName>, serve <string accountName>, deposit <double amount>,
-withdraw <double amount>, query, end, quit
+Commands: create \<string accountName\>, serve \<string accountName\>, deposit \<double amount\>,
+withdraw \<double amount\>, query, end, quit
 
 
 [--DESIGN DOCUMENTATION--]
