@@ -118,7 +118,6 @@ void * clientThread( void * servSocket )
 			createAllowed = 0;
 			if( listHead == NULL )
 			{
-				//printf( "Setting head\n" );
 				listHead = (Node *)malloc(sizeof(Node));
 				listHead->accountData = accountBuilder;
 			}
@@ -210,8 +209,6 @@ void * clientThread( void * servSocket )
 
 				Node * current = accountFinder( listHead, serviceNode->accountData.name );
 			
-				//printf( "Amount to deposit: %f to %s\n", amt, current->accountData.name );
-			
 				current->accountData.balance = current->accountData.balance + amt;
 			
 				send( sokt, "Deposited money.", strlen( "Deposited money." ), 0 );
@@ -297,7 +294,6 @@ void * clientThread( void * servSocket )
 				serviceNode->accountData.inSession = 0;
 				serviceNode = NULL;
 				send( sokt, "Ended service with current account.", strlen( "Ended service with current account." ), 0 );
-				//printf( "User %d exited. Closing thread.\n", sokt );
 			}
 			//printf( "User %d ended their current account session.\n", sokt );
 		}
